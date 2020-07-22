@@ -1,0 +1,435 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #7a5202;
+}
+
+a {
+  text-decoration: none;
+  color: orange;
+}
+.navigation {
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.navigation ul a {
+  display: block;
+  padding: 20px;
+  xborder-right: 1px solid #aaa;
+  text-decoration: none;
+}
+.navigation ul a:hover {
+  color: #fff;
+  background-color: orange;
+  transition: background-color 0.3s;
+}
+
+.navigation .logo {
+  float: left;
+  display: block;
+  font-size: 2em;
+  padding: 10px 20px;
+  font-weight: bolder;
+  text-shadow: 2px 2px #000000;
+}
+.navigation .logo:hover {
+  color: orangered;
+  transition: color 0.5s;
+}
+.navigation .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.navigation .menu-icon {
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+.navigation .menu-icon .nav-icon {
+  background: orange;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.navigation .menu-icon .nav-icon:before {
+  background: orange;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: 5px;
+}
+.navigation .menu-icon .nav-icon:after {
+  background: orange;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  top: -5px;
+}
+.navigation .menu-icon .nav-icon:hover {
+  background: orangered;
+  transition: background 0.2s ease-out;
+}
+.signin-btn {
+  float: right;
+  display: block;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: orange;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 15px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signin-btn:hover {
+  background-color: orangered;
+  transition: background-color 0.5s;
+}
+
+.navigation .menu-btn {
+  display: none;
+}
+.navigation .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.navigation .menu-btn:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+/* banner */
+.banner-cnt {
+  width: 100%;
+  background: #000;
+  padding-top: 60px;
+}
+.banner-cnt img {
+  width: 100%;
+}
+.motto {
+  color: #fff;
+  margin: 0;
+  xpadding: 90px 100px;
+  padding: 70px 200px 90px 90px;
+  position: absolute;
+  left: -80px;
+  text-transform: capitalize;
+  background: transparent;
+}
+/* tvs hows */
+.container {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  flex-direction: column;
+}
+.container .tv-show {
+  top: 20px;
+  xdisplay: flex;
+}
+.container .tv-show h5 {
+  color: #fff;
+  margin: 0;
+  xborder: 1px seagreen solid;
+  xbackground: red;
+  padding: 20px;
+}
+.container .tv-show .tv-menu li {
+  list-style: none;
+  overflow: hidden;
+  margin-left: -44px;
+}
+
+.container .tv-show .tv-menu li img {
+  height: 450px;
+  width: 650px;
+}
+
+/* movies */
+.container .movies {
+  top: 20px;
+  xdisplay: flex;
+}
+.container .movies h5 {
+  color: #fff;
+  margin: 0;
+  xborder: 1px seagreen solid;
+  xbackground: red;
+  padding: 20px;
+}
+.container .movies .movies-menu li {
+  list-style: none;
+  overflow: hidden;
+  margin-left: -44px;
+}
+
+.container .movies .movies-menu li img {
+  height: 450px;
+  width: 650px;
+}
+
+/* anime */
+.container .anime {
+  top: 20px;
+  xdisplay: flex;
+}
+.container .anime h5 {
+  color: #fff;
+  margin: 0;
+  xborder: 1px seagreen solid;
+  xbackground: red;
+  padding: 20px;
+}
+.container .anime .anime-menu li {
+  list-style: none;
+  overflow: hidden;
+  margin-left: -44px;
+}
+
+.container .anime .anime-menu li img {
+  height: 450px;
+  width: 650px;
+}
+
+/* footer */
+
+footer {
+  background: black;
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* desktop view */
+
+@media (min-width: 1356px) {
+  .navigation li {
+    float: left;
+  }
+  .navigation li a {
+    padding: 30px 50px;
+  }
+
+  .navigation .menu {
+    clear: none;
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+
+    max-height: none;
+  }
+  .navigation .menu-icon {
+    display: none;
+  }
+  .navigation ul a {
+    color: #000;
+  }
+  .signin-btn {
+    float: right;
+    display: block;
+    xmargin-top: 10px;
+    xmargin-right: 66px;
+    margin: 20px;
+    background: orange;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .navigation .logo {
+    float: left;
+    display: block;
+    font-size: 3em;
+    padding: 20px;
+    font-weight: bolder;
+    text-shadow: 2px 2px #000000;
+  }
+  .navigation .logo:hover {
+    color: orangered;
+    transition: color 0.5s;
+  }
+  .motto {
+    color: #fff;
+    font-size: 3em;
+    padding: 250px 200px;
+    xpadding: 250px 200px 90px 90px;
+    position: absolute;
+    left: -100px;
+    text-transform: capitalize;
+    background: transparent;
+    text-shadow: 2px 2px #000000;
+  }
+  /* tvs hows */
+  .container {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    xflex-direction: column;
+  }
+  .container .tv-show {
+    top: 20px;
+    flex-direction: row;
+    xdisplay: flex;
+  }
+  .container .tv-show h5 {
+    color: #fff;
+    margin: 0;
+    xborder: 1px seagreen solid;
+    xbackground: red;
+    padding: 20px;
+  }
+  .container .tv-show .tv-menu li {
+    display: inline;
+    xflex-direction: row;
+    list-style: none;
+    overflow: hidden;
+    margin-left: -44px;
+  }
+
+  .container .tv-show .tv-menu li img {
+    height: 360px;
+    width: 360px;
+    padding: 15px;
+  }
+
+  /* movies */
+  .container .movies {
+    top: 20px;
+    xdisplay: flex;
+  }
+  .container .movies h5 {
+    color: #fff;
+    margin: 0;
+    xborder: 1px seagreen solid;
+    xbackground: red;
+    padding: 20px;
+  }
+  .container .movies .movies-menu li {
+    display: inline;
+    list-style: none;
+    overflow: hidden;
+    margin-left: -44px;
+  }
+
+  .container .movies .movies-menu li img {
+    height: 350px;
+    width: 360px;
+    padding: 15px;
+  }
+
+  /* anime */
+  .container .anime {
+    top: 20px;
+    xdisplay: flex;
+  }
+  .container .anime h5 {
+    color: #fff;
+    margin: 0;
+    xborder: 1px seagreen solid;
+    xbackground: red;
+    padding: 20px;
+  }
+  .container .anime .anime-menu li {
+    display: inline;
+    list-style: none;
+    overflow: hidden;
+    xmargin-left: -44px;
+  }
+
+  .container .anime .anime-menu li img {
+    height: 350px;
+    width: 360px;
+    padding: 15px;
+  }
+}
+
+/* tablet view */
+
+/* @media (min-width: 48rem) {
+  .navigation li {
+    float: left;
+  }
+  .navigation li a {
+    padding: 30px 50px;
+  }
+
+  .navigation .menu {
+    clear: none;
+    float: right;
+    margin-right: 50px;
+    margin-top: 10px;
+
+    max-height: none;
+  }
+  .navigation .menu-icon {
+    display: none;
+  }
+  .navigation ul a {
+    color: #000;
+  }
+  .signin-btn {
+    float: right;
+    display: block;
+    xmargin-top: 10px;
+    xmargin-right: 66px;
+    margin: 20px;
+    background: orange;
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .navigation .logo {
+    float: left;
+    display: block;
+    font-size: 3em;
+    padding: 20px;
+    font-weight: bolder;
+    text-shadow: 2px 2px #000000;
+  }
+  .navigation .logo:hover {
+    color: orangered;
+    transition: color 0.5s;
+  }
+} */
